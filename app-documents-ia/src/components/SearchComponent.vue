@@ -2,7 +2,7 @@
   <v-container>
     <v-row >
       <v-col cols="12" class="mx-auto text-center">
-        <v-card :loading = loadingResult :text=textOutputOpenai></v-card>
+        <v-card :loading=loadingResult :text=textOutputOpenai></v-card>
       </v-col>
     </v-row>
   </v-container>
@@ -47,7 +47,7 @@ export default {
         
         this.textOutputOpenai=response.data
         
-
+        this.loadingResult=false
       } catch (error) {
         console.error(error);
       }
