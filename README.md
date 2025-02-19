@@ -125,3 +125,40 @@ Create a .env file in the root of the project and add your OpenAI API key: <vsco
 Build and start the containers:
 docker-compose up --build
 
+Dockerfile para o Front-end (Vue.js com Vite)
+
+FROM node:16-alpine
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
+EXPOSE 3000
+CMD ["npm", "run", "preview"]
+
+Arquivo docker-compose.yml
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./back-end-doc-ia
+    container_name: backend
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+
+  frontend:
+    build:
+      context: ./app-documents-ia
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
