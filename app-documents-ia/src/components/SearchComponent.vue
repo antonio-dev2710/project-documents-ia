@@ -2,7 +2,7 @@
   <v-container>
     <v-row >
       <v-col cols="12" class="mx-auto text-center">
-        <v-card loading :text=textOutputOpenai></v-card>
+        <v-card :loading = loadingResult :text=textOutputOpenai></v-card>
       </v-col>
     </v-row>
   </v-container>
@@ -27,7 +27,8 @@ export default {
     return {
       
       textInputOpenai: '',
-      textOutputOpenai: ''
+      textOutputOpenai: '',
+      loadingResult:Boolean = false,
     };
   },
   mounted() {
@@ -38,15 +39,14 @@ export default {
         async obterDados() {
       const endpoint = `http://localhost:8000/test-openai`;
       
-      debugger;
+      this.loadingResult=true
       try {
         const response = await axios.post(endpoint, {
           text: this.textInputOpenai
         });
         
         this.textOutputOpenai=response.data
-        console.log("Texto de resposta");
-        console.log(this.textOutputOpenai);
+        
 
       } catch (error) {
         console.error(error);
