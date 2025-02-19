@@ -118,12 +118,7 @@ services:
     depends_on:
       - backend
 
-Running with Docker Compose
 
-Create a .env file in the root of the project and add your OpenAI API key: <vscode_annotation details='xxxxxxxxxxxxxxxxxxxxxx'> </vscode_annotation> ```env OPENAI_API_KEY=your_openai_api_key
-
-Build and start the containers:
-docker-compose up --build
 
 Dockerfile para o Front-end (Vue.js com Vite)
 
@@ -142,6 +137,12 @@ EXPOSE 3000
 CMD ["npm", "run", "preview"]
 
 Arquivo docker-compose.yml
+Running with Docker Compose
+
+Create a .env file in the root of the project and add your OpenAI API key: <vscode_annotation details='xxxxxxxxxxxxxxxxxxxxxx'> </vscode_annotation> ```env OPENAI_API_KEY=your_openai_api_key
+
+Build and start the containers:
+docker-compose up --build
 version: '3.8'
 
 services:
