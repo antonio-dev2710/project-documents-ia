@@ -3,7 +3,7 @@ version: '3.8'
 services:
   backend:
     build:
-      context: ./back-end-doc-ia
+      context: ./backend-docs-ia
     container_name: backend
     ports:
       - "8000:8000"
