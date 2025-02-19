@@ -1,5 +1,6 @@
 # Project IA Documents
-![alt text](C:\Users\anton\Downloads\project-documents-ia\iaDocuments‐ Feito com o Clipchamp.gif)
+![Demonstração](iaDocuments.gif)
+
 
 ## Description
 This project uses artificial intelligence to process and analyze documents. It leverages libraries such as Flask, OpenAI, and Pandas to create a web application that allows text and data analysis.
