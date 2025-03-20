@@ -3,7 +3,7 @@
 ![Demonstração](iaDocuments.gif)
 
 ## Description
-This project uses artificial intelligence to process and analyze documents. It leverages libraries such as Flask, OpenAI, and Pandas to create a web application that allows text and data analysis.
+This project uses artificial intelligence to process and analyze messages. It leverages libraries such as Flask, OpenAI, and Pandas to create a web application that allows text and data analysis.
 
 ## Project Structure
 
