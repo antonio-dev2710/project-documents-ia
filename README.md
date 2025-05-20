@@ -1,4 +1,4 @@
-# Project IA Documents
+# Project IA
 
 ![Demonstração](iaDocuments.gif)
 
